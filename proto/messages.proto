@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "github.com/ViktorVolga/SH-MQTTServer/proto"; 
+package messages;
+
+enum MessageType
+{
+  TEMPERATURE = 0;
+}
+
+message TemperatureMessage
+{
+    MessageType m_type = 1;
+    float m_temperature = 2;
+    int64 m_timeStamp = 3;
+    uint64 m_deviceId = 4;
+    uint64 m_sensorId = 5;
+}
